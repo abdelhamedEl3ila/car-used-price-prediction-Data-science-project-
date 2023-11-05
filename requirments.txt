@@ -6,4 +6,5 @@ plotly
 xgboost
 scikit-learn
 Flask
+dill
 -e .

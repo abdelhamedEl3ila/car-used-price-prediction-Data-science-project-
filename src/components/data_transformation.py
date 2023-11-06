@@ -76,8 +76,9 @@ class DataTransformation:
             preprocessing_obj=self.get_data_transformer_object()
 
             target_column_name="price"
-            numerical_columns = ["fueltype","aspiration","doornumber","carbody","drivewheel","enginetype",
-"cylindernumber"]
+            numerical_columns = ['symboling','wheelbase','carheight', 'curbweight',
+                      'enginesize', 'compressionratio', 'horsepower',
+                      'peakrpm', 'highwaympg']
 
             input_feature_train_df=train_df.drop(columns=[target_column_name],axis=1)
             target_feature_train_df=train_df[target_column_name]

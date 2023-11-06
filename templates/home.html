@@ -1,0 +1,125 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Student Exam Performance Indicator</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Student Exam Performance Prediction</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">fueltype</label>
+            <select class="form-control" name="fueltype" placeholder="Enter car fueltype" required>
+                <option class="placeholder" selected disabled value="">Select car fueltype</option>
+                <option value="gas">
+                    gas
+                </option>
+                <option value="diesel">
+                    diesel
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">car doornumber</label>
+            <select class="form-control" name="doornumber" placeholder="Enter you doornumber" required>
+                <option class="placeholder" selected disabled value="">Select doornumber</option>
+                <option value="two">
+                    two
+                </option>
+                <option value="four">
+                    four
+                </option>
+                
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Enter  body of car</label>
+            <select class="form-control" name="carbody"
+                placeholder="Enter carbody" required>
+                <option class="placeholder" selected disabled value="">Select  carbody</option>
+                <option value="convertible">
+                  convertible
+                </option>
+                <option value="sedan">
+                  sedan
+                </option>
+                <option value="hatchback">
+                  hatchback
+                </option>
+                <option value="wagon">
+                  wagon
+                </option>
+                <option value="hardtop">
+                  hardtop
+                </option>
+            
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">aspiration</label>
+            <select class="form-control" name="aspiration" placeholder="Enter car aspiration" required>
+                <option class="placeholder" selected disabled value="">Select aspiration</option>
+                <option value="std">
+                  std
+                </option>
+                <option value="turbo">
+                  turbo
+                </option>
+            </select>
+        </div>
+     
+        <div class="mb-3">
+            <label class="form-label">Writing rating of seifty</label>
+            <input class="form-control" type="number" name="symboling"
+                placeholder="Enter your rating " min='0' max='5' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Enter car wheelbase</label>
+            <input class="form-control" type="number" name="wheelbase"
+                placeholder="Enter car wheelbase" min='50' max='100' />
+        </div>
+      </div>
+      <div class="mb-3">
+          <label class="form-label">Enter car carheight</label>
+          <input class="form-control" type="number" name="carheight"
+              placeholder="Enter car carheight" min='40' max='60' />
+      </div>
+      <div class="mb-3">
+         <label class="form-label">Enter car curbweight</label>
+         <input class="form-control" type="number" name="curbweight"
+             placeholder="Enter car curbweight" min='1000' max='5000' />
+     </div>
+     <div class="mb-3">
+      <label class="form-label">Enter car enginesize</label>
+      <input class="form-control" type="number" name="enginesize"
+          placeholder="Enter car enginesize" min='100' max='200' />
+  </div>
+        <div class="mb-3">
+         <label class="form-label">Enter car compressionratio</label>
+         <input class="form-control" type="number" name="compressionratio"
+             placeholder="Enter car compressionratio" min='0' max='10' />
+     </div>
+     <div class="mb-3">
+      <label class="form-label">Enter car horsepower</label>
+      <input class="form-control" type="number" name="horsepower"
+          placeholder="Enter car horsepower" min='0' max='500' />
+  </div>
+  <div class="mb-3">
+   <label class="form-label">Enter car peakrpm</label>
+   <input class="form-control" type="number" name="peakrpm"
+       placeholder="Enter car peakrpm" min='1000' max='10000' />
+</div>
+   <div class="mb-3">
+   <label class="form-label">Enter car highwaympg</label>
+   <input class="form-control" type="number" name="highwaympg"
+       placeholder="Enter car highwaympg" min='10' max='100' />
+</div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict car price" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>

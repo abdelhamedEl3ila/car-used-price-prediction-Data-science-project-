@@ -1,11 +1,10 @@
 <html>
 <body>
     <div class="login">
-       <h1>Student Exam Performance Indicator</h1>
    
        <form action="{{ url_for('predict_datapoint')}}" method="post">
         <h1>
-            <legend>Student Exam Performance Prediction</legend>
+            <legend>Student Car Used Price Prediction</legend>
         </h1>
         <div class="mb-3">
             <label class="form-label">fueltype</label>
@@ -33,9 +32,8 @@
             </select>
         </div>
         <div class="mb-3">
-            <label class="form-label">Enter  body of car</label>
-            <select class="form-control" name="carbody"
-                placeholder="Enter carbody" required>
+          <label class="form-label">Enter carbody</label>
+            <select class="form-control" name="carbody"    <div class="mb-3">
                 <option class="placeholder" selected disabled value="">Select  carbody</option>
                 <option value="convertible">
                   convertible
@@ -55,6 +53,47 @@
             
             </select>
         </div>
+        <div class="mb-3">
+            <label class="form-label">Enter  number of cylinde car</label>
+            <select class="form-control" name="cylindernumber"    <div class="mb-3">
+                <option class="placeholder" selected disabled value="">Select  cylindernumber</option>
+                <option value="two">
+                  two
+                </option>
+                <option value="three">
+                  three
+                </option>
+                <option value="four">
+                  four
+                </option>
+                <option value="five">
+                  five
+                </option>
+                <option value="sex">
+                  sex
+                  </option>
+                  <option value="seven">
+                    seven
+                  </option>
+                  <option value="eight">
+                    eight
+                  </option>
+                  <option value="nine">
+                    nine
+                  </option>
+                  <option value="ten">
+                    ten
+                  </option>
+                  <option value="eleven">
+                    eleven
+                  </option>
+                  <option value="twelve">
+                    twelve          
+                  </option>
+            
+            </select>
+        </div>
+               
         <div class="mb-3">
             <label class="form-label">aspiration</label>
             <select class="form-control" name="aspiration" placeholder="Enter car aspiration" required>

@@ -21,14 +21,14 @@ class DataTransformationConfig:
 class DataTransformation:
     def __init__(self):
         self.data_transformation_config=DataTransformationConfig()
-
+  
     def get_data_transformer_object(self):
         try:
 
             numerical_columns = ['symboling','wheelbase','carheight', 'curbweight',
                       'enginesize', 'compressionratio', 'horsepower',
                       'peakrpm', 'highwaympg']
-            categorical_columns = ["fueltype","doornumber","carbody","aspiration"]
+            categorical_columns = ["fueltype","doornumber","carbody","cylindernumber","aspiration"]
             num_pipeline= Pipeline(
                 steps=[
                 ("scaler",StandardScaler())
@@ -37,9 +37,10 @@ class DataTransformation:
             )
 
             cat_pipeline=Pipeline(
+                
 
                 steps=[
-                ("one_hot_encoder",OneHotEncoder()),
+                ("one_hot_encoder",OneHotEncoder(handle_unknown='ignore')),
                 ("scaler",StandardScaler(with_mean=False))
                 ]
 

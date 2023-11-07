@@ -24,6 +24,7 @@ def predict_datapoint():
       fueltype=request.form.get('fueltype'),
             doornumber=request.form.get('doornumber'),
             carbody=request.form.get('carbody'),
+            cylindernumber=request.form.get('cylindernumber'),
             aspiration=request.form.get('aspiration'),
             symboling=float(request.form.get('symboling')),
             carheight=float(request.form.get('carheight')),

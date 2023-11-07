@@ -31,6 +31,7 @@ class CustomData:
         fueltype: str,
         doornumber: str,
         carbody: str,
+        cylindernumber: str,
         aspiration: str,
         symboling: float,
         carheight: float,
@@ -49,6 +50,8 @@ class CustomData:
         self.doornumber = doornumber
         self.carbody = carbody
         self.aspiration = aspiration
+        self.cylindernumber = cylindernumber
+
         self.symboling = symboling
         self.carheight = carheight
         self.curbweight = curbweight
@@ -67,6 +70,7 @@ class CustomData:
                 "fueltype": [self.fueltype],
                 "doornumber": [self.doornumber],
                 "carbody": [self.carbody],
+                "cylindernumber": [self.cylindernumber],
                 "aspiration": [self.aspiration],
                 "symboling": [self.symboling],
                 "carheight": [self.carheight],
